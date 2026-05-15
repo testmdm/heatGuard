@@ -6,47 +6,6 @@
 
 **heatGuard** adalah sistem monitoring suhu dan kelembaban berbasis IoT yang canggih menggunakan WEMOS D1 Mini, sensor DHT22, dan integrasi cloud Blynk. Ideal untuk monitoring ruangan, greenhouse, gudang, atau aplikasi IoT lainnya.
 
-## 📚 Daftar Isi
-
-- [🎯 Fitur Utama](#-fitur-utama)
-- [📦 Hardware yang Dibutuhkan](#-hardware-yang-dibutuhkan)
-- [🔧 Panduan Merakit (Assembly Guide)](#-panduan-merakit-assembly-guide)
-- [💻 Setup Software](#-setup-software)
-- [🚀 Instalasi & Konfigurasi](#-instalasi--konfigurasi)
-- [📱 Penggunaan Dashboard](#-penggunaan-dashboard)
-- [⚡ Power Management](#-power-management)
-- [🐛 Troubleshooting](#-troubleshooting)
-- [📄 Lisensi](#-lisensi)
-
----
-
-## 🎯 Fitur Utama
-
-### ✨ Sensor & Monitoring
-- ✅ **Real-time Monitoring**: Pembacaan suhu dan kelembaban secara real-time
-- ✅ **Heat Index Calculation**: Menghitung indeks panas otomatis
-- ✅ **Akurasi Tinggi**: Sensor DHT22 dengan presisi ±0.5°C dan ±2% RH
-
-### ☁️ Konektivitas Cloud
-- ✅ **Blynk Integration**: Sinkronisasi data ke cloud Blynk secara otomatis
-- ✅ **Remote Access**: Monitor dari mana saja via aplikasi Blynk
-- ✅ **Auto Reconnect**: Koneksi otomatis WiFi dan Blynk setiap bangun
-
-### 💾 Data Storage
-- ✅ **Penyimpanan 5 Hari**: Buffer circular menyimpan 86,400 data point
-- ✅ **Interval 5 Detik**: Pembacaan data setiap 5 detik
-- ✅ **Web Dashboard**: Interface modern di `http://192.168.4.1`
-
-### 📊 Visualization & Export
-- ✅ **Interactive Charts**: Grafik trend 24 jam dan perbandingan harian
-- ✅ **Data Table**: Tampilan riwayat 50 data terbaru
-- ✅ **Export CSV**: Download data untuk analisis lebih lanjut
-
-### ⚡ Efisiensi Energi
-- ✅ **Light Sleep Mode**: Konsumsi hanya 1-2mA saat sleep
-- ✅ **Battery Optimized**: Rata-rata konsumsi 5-10mA
-- ✅ **LiPo Battery Support**: Cocok untuk aplikasi portable
-
 ---
 
 ## 📦 Hardware yang Dibutuhkan
