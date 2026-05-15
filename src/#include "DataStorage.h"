@@ -1,0 +1,36 @@
+#include "DataStorage.h"
+
+bool DataStorage::begin() {
+    if (!LittleFS.begin()) {
+        Serial.println("LittleFS Mount Failed. Formatting...");
+        return LittleFS.format() && LittleFS.begin();
+    }
+    return true;
+}
+
+bool DataStorage::addRecord(float t, float h, float hi) {
+    File f = LittleFS.open(path, "a"); // Append mode
+    if (!f) return false;
+    
+    // Format: Timestamp, Temp, Hum, HeatIndex
+    f.printf("%ld,%.2f,%.2f,%.2f\n", time(nullptr), t, h, hi);
+    f.close();
+    return true;
+}
+
+uint32_t DataStorage::getRecordCount() {
+    File f = LittleFS.open(path, "r");
+    if (!f) return 0;
+    uint32_t count = 0;
+    while (f.available()) { if (f.read() == '\n') count++; }
+    f.close();
+    return count;
+}
+
+String DataStorage::getRecordsAsCSV() {
+    File f = LittleFS.open(path, "r");
+    if (!f) return "Timestamp,Temp,Hum,HI\n";
+    String data = f.readString();
+    f.close();
+    return data;
+}
